@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://hjxpjhc5qi88"]
+
+[sub_resource type="SystemFont" id="SystemFont_xim5w"]
+font_names = PackedStringArray("Monospace", "Sans-Serif", "Serif")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ara8o"]
+
+[resource]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0.14902, 0.14902, 0.14902, 1)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 10
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 16
+Label/font_sizes/font_size = 48
+Label/fonts/font = SubResource("SystemFont_xim5w")
+Label/styles/normal = SubResource("StyleBoxEmpty_ara8o")

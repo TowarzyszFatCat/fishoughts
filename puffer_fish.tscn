@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://de6swq8dmqs8j"]
+
+[ext_resource type="Script" path="res://fish.gd" id="1_bjbda"]
+
+[sub_resource type="Curve" id="Curve_40gjo"]
+_data = [Vector2(0, 0.67033), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="puffer_fish" type="CharacterBody2D"]
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_bjbda")
+
+[node name="fish_body_full" type="Polygon2D" parent="."]
+position = Vector2(-64, -64)
+color = Color(0.623529, 0.00392157, 0, 1)
+antialiased = true
+polygon = PackedVector2Array(-8, 80, 16, 88, 40, 112, 88, 112, 72, 128, 96, 120, 112, 112, 120, 96, 112, 88, 128, 64, 112, 40, 88, 16, 64, 0, 40, 16, 32, 8, 16, 16, 8, 32, 16, 40, -8, 48, -24, 40, -16, 64, -24, 88)
+
+[node name="fish_body_close" type="Polygon2D" parent="."]
+position = Vector2(-64, -64)
+color = Color(1, 0.27451, 0.211765, 1)
+antialiased = true
+polygon = PackedVector2Array(-16, 64, 16, 88, 24, 104, 40, 112, 64, 112, 88, 112, 104, 104, 112, 88, 128, 64, 112, 40, 104, 24, 88, 16, 64, 16, 40, 16, 24, 24, 16, 40)
+
+[node name="puffer_fish" type="Node" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-88, -24, -80, 0, -88, 24, -72, 16, -48, 24, -40, 40, -24, 48, 24, 48, 8, 64, 32, 56, 48, 48, 56, 32, 48, 24, 64, 0, 48, -24, 40, -40, 24, -48, 0, -64, -24, -48, -32, -56, -48, -48, -56, -32, -48, -24, -72, -16)
+
+[node name="particles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 32
+lifetime = 1.5
+one_shot = true
+speed_scale = 2.0
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 50.0
+gravity = Vector2(0, 0)
+radial_accel_min = 300.0
+radial_accel_max = 300.0
+scale_amount_min = 20.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_40gjo")
+
+[node name="death_timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="point" type="Polygon2D" parent="."]
+position = Vector2(4.76837e-07, -9.53674e-07)
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(0, 8, 5.33333, 5.33333, 8, 0, 5.33333, -5.33333, 0, -8, -5.33333, -5.33333, -8, 0, -5.33333, 5.33333)
+
+[connection signal="timeout" from="death_timer" to="." method="_on_death_timer_timeout"]

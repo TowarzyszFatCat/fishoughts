@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdk1bpgyurmbh"]
+
+[ext_resource type="Script" path="res://fish.gd" id="1_s5fw3"]
+
+[sub_resource type="Curve" id="Curve_40gjo"]
+_data = [Vector2(0, 0.67033), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="triangle_fish" type="CharacterBody2D"]
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_s5fw3")
+
+[node name="fish_body_full" type="Polygon2D" parent="."]
+position = Vector2(-64, -64)
+color = Color(0.650433, 0.3713, 0.79, 1)
+antialiased = true
+polygon = PackedVector2Array(0, 64, -16, 104, 16, 80, 48, 112, 24, 120, 64, 128, 128, 64, 64, 0, 24, 8, 48, 16, 16, 48, -16, 24)
+
+[node name="fish_body_close" type="Polygon2D" parent="."]
+position = Vector2(-64, -64)
+color = Color(0.729412, 0.419608, 0.890196, 1)
+antialiased = true
+polygon = PackedVector2Array(0, 64, 64, 128, 128, 64, 64, 0)
+
+[node name="triangle_fish" type="Node" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -64, 64, 0, 0, 64, -40, 56, -16, 48, -48, 16, -80, 40, -64, 0, -80, -40, -48, -16, -16, -48, -40, -56)
+
+[node name="particles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 32
+lifetime = 1.5
+one_shot = true
+speed_scale = 2.0
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 50.0
+gravity = Vector2(0, 0)
+radial_accel_min = 300.0
+radial_accel_max = 300.0
+scale_amount_min = 20.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_40gjo")
+
+[node name="death_timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="point" type="Polygon2D" parent="."]
+position = Vector2(4.76837e-07, -9.53674e-07)
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(0, 8, 5.33333, 5.33333, 8, 0, 5.33333, -5.33333, 0, -8, -5.33333, -5.33333, -8, 0, -5.33333, 5.33333)
+
+[connection signal="timeout" from="death_timer" to="." method="_on_death_timer_timeout"]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6vyjwyqfsbyc"]
+
+[sub_resource type="Animation" id="Animation_ywvrj"]
+resource_name = "open"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("down:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.4, 3, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -384), Vector2(0, -32), Vector2(0, -288), Vector2(0, 192), Vector2(0, 416)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("up:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.4, 3, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1792, 1408), Vector2(1792, 1120), Vector2(1792, 1312), Vector2(1792, 896), Vector2(1792, 672)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n3j4e"]
+_data = {
+"open": SubResource("Animation_ywvrj")
+}
+
+[node name="eye_anim" type="Node2D"]
+
+[node name="down" type="Polygon2D" parent="."]
+z_index = 100
+position = Vector2(0, -384)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-256, 1600, 2048, 1600, 2048, 768, 896, 896, -256, 768)
+
+[node name="up" type="Polygon2D" parent="."]
+z_index = 100
+position = Vector2(1792, 1408)
+scale = Vector2(-1, -1)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-256, 1664, 2048, 1664, 2048, 768, 896, 896, -256, 768)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n3j4e")
+}

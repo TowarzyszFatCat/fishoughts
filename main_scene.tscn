@@ -1,0 +1,330 @@
+[gd_scene load_steps=9 format=3 uid="uid://c04eh188veal6"]
+
+[ext_resource type="PackedScene" uid="uid://bscm1vjtwf5q4" path="res://harpoon.tscn" id="1_tyotq"]
+[ext_resource type="Script" path="res://manager.gd" id="1_w7bfe"]
+[ext_resource type="Script" path="res://FISH_SPAWNER.gd" id="2_1ld2m"]
+[ext_resource type="PackedScene" uid="uid://b6vyjwyqfsbyc" path="res://eye_anim.tscn" id="4_upmfb"]
+[ext_resource type="Theme" uid="uid://hjxpjhc5qi88" path="res://theme.tres" id="5_myl6j"]
+[ext_resource type="AudioStream" uid="uid://byleoguqjckjc" path="res://bck.wav" id="6_uoptj"]
+[ext_resource type="AudioStream" uid="uid://yeko7yyrv7vh" path="res://harpoon.wav" id="7_65gly"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_viaaq"]
+bg_color = Color(0, 0, 0, 0.501961)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+
+[node name="MAIN_SCENE" type="Node2D"]
+script = ExtResource("1_w7bfe")
+
+[node name="bg" type="ColorRect" parent="."]
+offset_left = -248.0
+offset_top = -160.0
+offset_right = 2128.0
+offset_bottom = 1240.0
+color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[node name="harpoon" parent="." instance=ExtResource("1_tyotq")]
+
+[node name="FISH_SPAWNER" type="Node" parent="."]
+script = ExtResource("2_1ld2m")
+
+[node name="spawns_left" type="Node" parent="FISH_SPAWNER"]
+
+[node name="Marker2D" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, -64)
+
+[node name="Marker2D2" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 0)
+
+[node name="Marker2D3" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 64)
+
+[node name="Marker2D4" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 128)
+
+[node name="Marker2D5" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 192)
+
+[node name="Marker2D6" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 256)
+
+[node name="Marker2D7" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 320)
+
+[node name="Marker2D8" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 384)
+
+[node name="Marker2D9" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 448)
+
+[node name="Marker2D10" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 512)
+
+[node name="Marker2D11" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, -64)
+
+[node name="Marker2D12" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 0)
+
+[node name="Marker2D13" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 64)
+
+[node name="Marker2D14" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 128)
+
+[node name="Marker2D15" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 192)
+
+[node name="Marker2D16" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 256)
+
+[node name="Marker2D17" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 320)
+
+[node name="Marker2D18" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 384)
+
+[node name="Marker2D19" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 448)
+
+[node name="Marker2D20" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-128, 512)
+
+[node name="Marker2D21" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 578)
+
+[node name="Marker2D22" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 642)
+
+[node name="Marker2D23" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 578)
+
+[node name="Marker2D24" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 642)
+
+[node name="Marker2D25" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 706)
+
+[node name="Marker2D26" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 770)
+
+[node name="Marker2D27" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 834)
+
+[node name="Marker2D28" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 898)
+
+[node name="Marker2D30" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 706)
+
+[node name="Marker2D31" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 770)
+
+[node name="Marker2D32" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 834)
+
+[node name="Marker2D33" type="Marker2D" parent="FISH_SPAWNER/spawns_left"]
+position = Vector2(-126, 898)
+
+[node name="spawns_right" type="Node" parent="FISH_SPAWNER"]
+
+[node name="Marker2D39" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, -62)
+
+[node name="Marker2D40" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 2)
+
+[node name="Marker2D41" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 66)
+
+[node name="Marker2D42" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 130)
+
+[node name="Marker2D43" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 194)
+
+[node name="Marker2D44" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 258)
+
+[node name="Marker2D45" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 322)
+
+[node name="Marker2D46" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 386)
+
+[node name="Marker2D47" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 450)
+
+[node name="Marker2D48" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 514)
+
+[node name="Marker2D49" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, -62)
+
+[node name="Marker2D50" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 2)
+
+[node name="Marker2D51" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 66)
+
+[node name="Marker2D52" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 130)
+
+[node name="Marker2D53" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 194)
+
+[node name="Marker2D54" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 258)
+
+[node name="Marker2D55" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 322)
+
+[node name="Marker2D56" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 386)
+
+[node name="Marker2D57" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 450)
+
+[node name="Marker2D58" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2049, 514)
+
+[node name="Marker2D59" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 580)
+
+[node name="Marker2D60" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 644)
+
+[node name="Marker2D61" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 580)
+
+[node name="Marker2D62" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 644)
+
+[node name="Marker2D63" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 708)
+
+[node name="Marker2D64" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 772)
+
+[node name="Marker2D65" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 836)
+
+[node name="Marker2D66" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 900)
+
+[node name="Marker2D68" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 708)
+
+[node name="Marker2D69" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 772)
+
+[node name="Marker2D70" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 836)
+
+[node name="Marker2D71" type="Marker2D" parent="FISH_SPAWNER/spawns_right"]
+position = Vector2(2051, 900)
+
+[node name="Timer" type="Timer" parent="FISH_SPAWNER"]
+wait_time = 0.2
+one_shot = true
+
+[node name="eye_anim" parent="." instance=ExtResource("4_upmfb")]
+position = Vector2(64, 0)
+
+[node name="cl" type="CanvasLayer" parent="."]
+
+[node name="press_any_key" type="Label" parent="cl"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("5_myl6j")
+text = "Press any key"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="talk_mc" type="MarginContainer" parent="cl"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -500.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="talk" type="Panel" parent="cl/talk_mc"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_viaaq")
+
+[node name="mc" type="MarginContainer" parent="cl/talk_mc/talk"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="cl/talk_mc/talk/mc"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="cl/talk_mc/talk/mc/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("5_myl6j")
+theme_override_colors/font_color = Color(0.752451, 0.383641, 0, 1)
+text = "Void Master"
+autowrap_mode = 3
+
+[node name="VSplitContainer" type="VSplitContainer" parent="cl/talk_mc/talk/mc/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="dialog" type="Label" parent="cl/talk_mc/talk/mc/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("5_myl6j")
+text = "asdasdasdasdasdasdwawdsdaw"
+autowrap_mode = 3
+
+[node name="mc" type="MarginContainer" parent="cl"]
+offset_right = 187.0
+offset_bottom = 164.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="counter" type="Label" parent="cl/mc"]
+layout_mode = 2
+theme = ExtResource("5_myl6j")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_uoptj")
+volume_db = -10.0
+autoplay = true
+
+[node name="ta" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_65gly")
+pitch_scale = 0.5
+
+[connection signal="timeout" from="FISH_SPAWNER/Timer" to="FISH_SPAWNER" method="_on_timer_timeout"]

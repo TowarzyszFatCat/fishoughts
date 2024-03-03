@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bscm1vjtwf5q4"]
+
+[ext_resource type="Script" path="res://harpoon.gd" id="1_wtx36"]
+
+[node name="harpoon" type="Node2D"]
+z_index = 50
+script = ExtResource("1_wtx36")
+
+[node name="raycast" type="RayCast2D" parent="."]
+position = Vector2(896, 744)
