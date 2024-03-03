@@ -47,6 +47,8 @@ func _process(delta):
 		
 
 func talk_func(f_name, f_dialog, type):
+	
+	$cl/talk_mc/talk/mc/VBoxContainer/skip.visible = false
 	harpoon.visible = false
 	harpoon.process_mode = Node.PROCESS_MODE_DISABLED
 	
@@ -70,6 +72,10 @@ func talk_func(f_name, f_dialog, type):
 	var dial_len = len(f_dialog)
 	
 	for i in dial_len:
+		if i == dial_len - 1:
+			$cl/talk_mc/talk/mc/VBoxContainer/skip.visible = true
+		
+		
 		if f_dialog[i] == " ":
 			t_dialog.text += f_dialog[i]
 		elif f_dialog[i] == ".":
@@ -87,7 +93,10 @@ func talk_func(f_name, f_dialog, type):
 	if type == 50:
 		await  get_tree().create_timer(600).timeout
 	
-	await  get_tree().create_timer(3).timeout
+	while !Input.is_action_pressed("LMB"):
+		await get_tree().create_timer(0.05).timeout
+		
+	#await get_tree().create_timer(3).timeout
 	talk.visible = false
 	
 	if type != 0:

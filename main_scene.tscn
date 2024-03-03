@@ -264,7 +264,7 @@ theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
 [node name="talk" type="Panel" parent="cl/talk_mc"]
-custom_minimum_size = Vector2(0, 500)
+custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_viaaq")
 
@@ -296,10 +296,24 @@ custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
 [node name="dialog" type="Label" parent="cl/talk_mc/talk/mc/VBoxContainer"]
+custom_minimum_size = Vector2(0, 330)
 layout_mode = 2
 size_flags_vertical = 1
 theme = ExtResource("5_myl6j")
-text = "asdasdasdasdasdasdwawdsdaw"
+autowrap_mode = 3
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="cl/talk_mc/talk/mc/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="skip" type="Label" parent="cl/talk_mc/talk/mc/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("5_myl6j")
+theme_override_font_sizes/font_size = 32
+text = "< PRESS LMB TO CONTINUE >"
+horizontal_alignment = 2
+vertical_alignment = 2
 autowrap_mode = 3
 
 [node name="mc" type="MarginContainer" parent="cl"]
