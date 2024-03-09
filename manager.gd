@@ -154,11 +154,6 @@ func caught(col):
 		await talk_func("Void Master", "Yet, with each catch, do you draw closer to enlightenment or further into the abyss?", 1)
 		glov.sat = 0.2
 		await talk_func("CREATOR", "Nice achievement! Now I can return what I took...", 10)
-	elif caught_fishes == 100:
-		await talk_func("Void Master", "A century of catches in the boundless sea of nothingness.", 1)
-		await talk_func("Void Master", "Yet, as you stand on the precipice of a hundred souls, do you perceive the fragmented shards of your identity converging into a singular whole?", 1)
-		await talk_func("Void Master", "Or do you remain adrift in the nihilistic currents, forever fragmented and lost amidst the chaos of existence?", 1)
-		await talk_func("CREATOR", "Wow you've come this far, you're catching and catching these fish, I'm glad you made it this far. Remember you are amazing!", 10)
 
 	# Philosophical Reflections
 	elif caught_fishes == 13:
@@ -248,6 +243,10 @@ func caught(col):
 	elif caught_fishes == 100:
 		await talk_func("Void Master", "In the vast expanse of the cosmos, do you perceive reality as a construct of the mind or an immutable truth?", 1)
 		await talk_func("Void Master", "For what is reality but a tapestry woven from the fabric of perception and the threads of existence?", 1)
+		await talk_func("Void Master", "A century of catches in the boundless sea of nothingness.", 1)
+		await talk_func("Void Master", "Yet, as you stand on the precipice of a hundred souls, do you perceive the fragmented shards of your identity converging into a singular whole?", 1)
+		await talk_func("Void Master", "Or do you remain adrift in the nihilistic currents, forever fragmented and lost amidst the chaos of existence?", 1)
+		await talk_func("CREATOR", "Wow you've come this far, you're catching and catching these fishes, I'm glad you made it this far. Remember you are amazing!", 10)
 		await talk_func("Void Master", "I feel like you already know too much... I have to eliminate you...", 1)
 		harpoon.visible = false
 		harpoon.process_mode = Node.PROCESS_MODE_DISABLED
